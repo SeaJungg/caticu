@@ -1,0 +1,38 @@
+{% load static %}
+{% load sass_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caticu</title>
+    <script type="text/javascript" src="main/static/JS/js.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <link rel="stylesheet" href="{% sass_src 'css/css.scss' %}" type="text/css">
+</head>
+<body>
+    <div class="body">
+        <div class="middle">
+            <div class="title-container">
+                <h1 class="title">ㅇㅅㅇ</h1>
+                <h1 class="title-down">ㅇㅂㅇ</h1>
+              </div>
+              
+              <form method="POST" action="{% url 'search' %}">
+              <fieldset class="field-container">
+                    <input type="text" placeholder="링크를 입력해보세요!" class="field" />
+                
+                    <div class="icons-container">
+                    <div class="icon-search"></div>
+                    <div class="icon-close">
+                        <div class="x-up"></div>
+                        <div class="x-down"></div>
+                    </div>
+                    </div>
+              </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
