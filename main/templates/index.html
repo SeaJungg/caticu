@@ -15,14 +15,12 @@
     <div class="body">
         <div class="middle">
             <div class="title-container">
-                <h1 class="title">ㅇㅅㅇ</h1>
-                <h1 class="title-down">ㅇㅂㅇ</h1>
+                <h1 class="title">2021-1 산업경영공학과 캡스톤디자인</h1>
+                <h1 class="title-down">캐리큐</h1>
               </div>
-              
-              <form method="POST" action="{% url 'search' %}">
+              <form method="GET" action="{% url 'search' %}">
               <fieldset class="field-container">
-                    <input type="text" placeholder="링크를 입력해보세요!" class="field" />
-                
+                    <input type="text" name='context' placeholder="링크를 입력해보세요!" class="field" />
                     <div class="icons-container">
                     <div class="icon-search"></div>
                     <div class="icon-close">

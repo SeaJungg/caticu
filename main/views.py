@@ -5,7 +5,8 @@ def index(request):
     return render(request, 'index.html')
 
 def search(request):
-    return redirect(outcome)
+    link = request.GET["context"]
+    return render(request, 'search.html', {link : "link"})
 
 def outcome(request):
     return render(request, 'outcome.html')
