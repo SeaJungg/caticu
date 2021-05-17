@@ -1,3 +1,9 @@
+{% load sass_tags %}
+{% load static %}
+{% block scss %}
+{% endblock %}
+
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +13,26 @@
     <title>Document</title>
 </head>
 <body>
-    {{ link }}
     <a href="{% url 'outcome' %}">분석결과</a>
+    <h2>{{title}}</h2>
+    {% if pnrate > 0.5 %}
+        이것은 긍정적 반응 얻는 중!<br>
+    {% else %}
+        이것은 부정적 반응 얻는 중!<br>
+    {% endif %}
+    긍정비율 : {{pnrate}}<br>
+    {{day0}}
+    {{day1}}
+    {{day2}}
+    {{day3}}
+    {{day4}}
+    {{day5}}
+    <br>
+    {% if predict == 1 %}
+        성공할 것으로 예측됩니다!<br>
+    {% else %}
+        안타깝지만.. 실패할 것으로 예측됩니다!<br>
+    {% endif %}
 </body>
 </html>
+{% endblock %}
