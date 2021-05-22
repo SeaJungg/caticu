@@ -1,0 +1,26 @@
+.chartarea{
+    display: flex;
+    margin-top:30px;
+    flex-direction: row;
+}
+
+.Button {
+    all: unset;
+    display: block;
+    cursor: pointer;
+    padding: 1.4em 1em 1.4em 1em;
+    margin: 3em;
+    border-radius: 10em;
+    color: white;
+    text-align: center;
+    width: 200px;
+}
+
+.leftbtn{
+    background-color: #0F75EF;
+}
+
+.rightbtn{
+    background-color: #fF75Ef;
+}
+      

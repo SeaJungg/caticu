@@ -29,7 +29,8 @@ def search(request):
         'day3':day3,
         'day4':day4,
         'day5':day5,
-        'predict':predict
+        'predict':predict,
+        'origin_url':link
     }
     return render(request, 'search.html', contents)
 

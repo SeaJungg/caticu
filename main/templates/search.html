@@ -20,13 +20,12 @@
         <div class="title">
             <h2>{{title}}</h2>
             {% if predict == 1 %}
-                성공할 것으로 예측됩니다!<br>
+                예측 결과, 성공할 것으로 보입니다!<br>
             {% else %}
-                실패할 것으로 예측됩니다!<br>
+                예측 결과, 실패할 것으로 보입니다!<br>
             {% endif %}
         </div>
         <div class="chartarea">
-            <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
                         <div class="row align-items-center">
@@ -45,49 +44,30 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="card">
-                <div class="card-header">
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <h3 class="mb-0"> 일일 펀딩 수</h3>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <h3 class="mb-0"> 일일 펀딩 수</h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-body">
-                    <div class="grid">
-                        <div class="grid-body">
-                            <div class="item-wrapper">
-                                <canvas id="chartjs-staked-line-chart" width="600" height="400"></canvas>
+                    <div class="card-body">
+                        <div class="grid">
+                            <div class="grid-body">
+                                <div class="item-wrapper">
+                                    <canvas id="chartjs-staked-line-chart" width="600" height="400"></canvas>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+        </div>
+        <div class="footer">
+            <button class="Button leftbtn"><a href = {{origin_url}}>펀딩 자세히 보러 가기</a></button>
+            <button class="Button rightbtn"><a href = "{% url 'index' %}">다른 펀딩 예측하러 가기</a></button>
         </div>
     </div>
-    
-    {% if pnrate > 0.5 %}
-        긍정적 반응 얻는 중!<br>
-    {% else %}
-        부정적 반응 얻는 중!<br>
-    {% endif %}
-    {{pnrate}}<br>
-    {{day0}}
-    {{day1}}
-    {{day2}}
-    {{day3}}
-    {{day4}}
-    {{day5}}
-    <br>
-    
-    
-
-    
-
-
 </body>
 </html>
 {% block JS %}
