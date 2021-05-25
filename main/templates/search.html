@@ -3,27 +3,52 @@
 {% block content %}
 
 {% block scss %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 <link rel="stylesheet" href="{% sass_src 'css/outcome.scss' %}" type="text/css">
-{% endblock %}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;900&display=swap" rel="stylesheet">{% endblock %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
-<body>
+<body><center>
     <div class="content">
         <div class="title">
-            <h2>{{title}}</h2>
-            {% if predict == 1 %}
-                예측 결과, 성공할 것으로 보입니다!<br>
-            {% else %}
-                예측 결과, 실패할 것으로 보입니다!<br>
-            {% endif %}
+            <div class="title-top">
+                <br>
+                <br>
+                <h1>2021-1 산업경영공학과 캡스톤디자인 캐리큐</h1>
+                <br>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h2 class="mb-0">{{title}}</h2>
+                            <button class="btn btn-light"type="button"><a href = {{origin_url}} style="text-decoration:none">펀딩 자세히 보러 가기</a></button>
+
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class = outcome>
+                <br>
+                <br>
+                {% if predict == 1 %}
+                <h3>예측 결과, 성공할 것으로 보입니다!<br></h3>
+                {% else %}
+                <h3>예측 결과, 실패할 것으로 보입니다.<br></h3>
+                {% endif %}
+            </div>     
         </div>
         <div class="chartarea">
                 <div class="card">
@@ -64,10 +89,10 @@
                 </div>
         </div>
         <div class="footer">
-            <button class="Button leftbtn"><a href = {{origin_url}}>펀딩 자세히 보러 가기</a></button>
-            <button class="Button rightbtn"><a href = "{% url 'index' %}">다른 펀딩 예측하러 가기</a></button>
+            <br>
+            <button class="btn btn-light" type="button"><a href = "{% url 'index' %}" style="text-decoration:none">다른 펀딩 예측하러 가기</a></button>
         </div>
-    </div>
+    </div></center>
 </body>
 </html>
 {% block JS %}

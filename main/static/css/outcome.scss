@@ -1,26 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+$cornflower-blue: #6078EA;
+$tundora: #4B4848;
+
+
+.content {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
 .chartarea{
     display: flex;
     margin-top:30px;
     flex-direction: row;
+    justify-content: center;
 }
 
-.Button {
-    all: unset;
-    display: block;
-    cursor: pointer;
-    padding: 1.4em 1em 1.4em 1em;
-    margin: 3em;
-    border-radius: 10em;
-    color: white;
-    text-align: center;
-    width: 200px;
+.card{
+    margin-left: 1em;
+    margin-right: 1em;
+    box-shadow: 0px 8px 15px rgba($tundora, 0.1);
 }
-
-.leftbtn{
-    background-color: #0F75EF;
+.title-top {
+    color: $cornflower-blue;
 }
-
-.rightbtn{
-    background-color: #fF75Ef;
-}
-      
